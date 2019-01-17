@@ -1,8 +1,10 @@
 package me.greatyhh.chart.controller;
 
+import me.greatyhh.chart.annotation.TrackTime;
 import me.greatyhh.chart.model.vo.RecordAddVO;
 import me.greatyhh.chart.utils.GreatyhhResponse;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/exercise")
 public class ExerciseController {
-  @GetMapping("/record")
+
+  @TrackTime
+  @PostMapping("/record")
   public GreatyhhResponse addRecord(RecordAddVO recordAddVO){
     return GreatyhhResponse.ok().remark("fuck");
   }

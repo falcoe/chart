@@ -15,12 +15,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
  **/
 @ControllerAdvice
 class GlobalErrorHandler {
-  public static final String DEFAULT_ERROR_VIEW = "error";
 
   @ExceptionHandler(value = Exception.class)
   @ResponseBody
-  public String defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
-    return "This is a message sent by an exception.";
+  public GreatyhhResponse defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
+    return GreatyhhResponse.fail().remark("Exception: " + e.getMessage()).code(500);
+  }
+
+  /**
+   * 全局捕获AuthException并处理
+   * @return
+   */
+  @ExceptionHandler(value = AuthException.class)
+  @ResponseBody
+  public GreatyhhResponse authExceptionHandler(AuthException e) {
+    return GreatyhhResponse.fail().remark("AuthException: " + e.getMessage()).code(204);
   }
 
 //  @ExceptionHandler(value = MyException.class)

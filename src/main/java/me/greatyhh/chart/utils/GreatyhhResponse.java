@@ -17,17 +17,12 @@ public class GreatyhhResponse<T> implements Serializable{
   /**
    * 请求成功flag
    */
-  private boolean ok;
-
-  /**
-   * 请求失败flag
-   */
-  private boolean fail;
+  private boolean success;
 
   /**
    * 服务相应的状态码
    */
-  private String code;
+  private int code;
 
   /**
    * 返回的数据
@@ -50,17 +45,17 @@ public class GreatyhhResponse<T> implements Serializable{
 
   public static GreatyhhResponse ok() {
     GreatyhhResponse response = new GreatyhhResponse();
-    response.ok = true;
+    response.success = true;
     return response;
   }
 
   public static GreatyhhResponse fail() {
     GreatyhhResponse response = new GreatyhhResponse();
-    response.fail = true;
+    response.success = false;
     return response;
   }
 
-  public GreatyhhResponse code(String code) {
+  public GreatyhhResponse code(int code) {
     this.code = code;
     return this;
   }
@@ -83,7 +78,7 @@ public class GreatyhhResponse<T> implements Serializable{
   @Override
   public String toString() {
     return "GreatyhhResponse{" +
-        "ok=" + ok +
+        "success=" + success +
         ", code='" + code + '\'' +
         ", data=" + data +
         ", remark='" + remark + '\'' +

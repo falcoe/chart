@@ -2,8 +2,7 @@ package me.greatyhh.chart.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -11,11 +10,11 @@ import org.springframework.stereotype.Controller;
  * </p>
  *
  * @author greatyhh
- * @since 2019-01-16
+ * @since 2019-01-17
+ * @description 处理用户注册登录登出
  */
-@Controller
+@RestController
 @RequestMapping("/user")
 public class UserController {
 
 }
-

@@ -26,6 +26,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
+	compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.2'
 	compile 'com.alibaba:fastjson:1.2.54'
 	compileOnly 'org.projectlombok:lombok'
 	compile('org.flywaydb:flyway-core')
