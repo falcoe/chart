@@ -60,6 +60,7 @@ public class GreatyhhResponse<T> implements Serializable{
     return this;
   }
 
+  @SuppressWarnings(value = "No warning.")
   public GreatyhhResponse data(T data) {
     this.data = data;
     return this;

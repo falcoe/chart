@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: home
+  config:
+    name: home
+  datasource:
+    url: jdbc:mysql://example.com:3306/workout
+    password: demo
+    username: demo
+    driver-class-name: com.mysql.cj.jdbc.Driver

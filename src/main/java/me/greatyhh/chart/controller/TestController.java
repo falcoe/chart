@@ -15,6 +15,7 @@ public class TestController {
 
 //  @TrackTime
   @GetMapping("/test")
+  @SuppressWarnings("unchecked")
   public GreatyhhResponse testChart(HttpServletResponse response) {
     ChartItemVO[] chartItems = new ChartItemVO[10];
     for (int i = 0; i < 10; i++) {

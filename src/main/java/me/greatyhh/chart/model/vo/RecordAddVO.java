@@ -6,7 +6,7 @@ import lombok.experimental.Accessors;
 
 /**
  * @program: chart
- * @description: 前段传来的运动记录
+ * @description: 前端传来的运动记录
  * @author: chuangheng.yang
  * @create: 2019-01-15 14:46
  **/

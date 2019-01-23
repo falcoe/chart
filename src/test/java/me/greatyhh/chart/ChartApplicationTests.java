@@ -11,6 +11,7 @@ public class ChartApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println("nonononon");
 	}
 
 }
